@@ -39,5 +39,4 @@ jobs:
           aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY_PRODUCTION - profile default
           aws configure set default.region us-east-1
           
-          bash init.sh
-          bash push.sh
+          aws s3 ls
