@@ -11,6 +11,12 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
+      
+      - name: Install AWS CLI
+        run: |
+          curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+          unzip awscliv2.zip
+          sudo ./aws/install
           
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -28,5 +34,6 @@ jobs:
         run: |
           npm install -g @aws-amplify/cli
           node -v
+          aws s3 ls
           bash init.sh
           bash push.sh
