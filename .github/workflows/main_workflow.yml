@@ -34,6 +34,6 @@ jobs:
         run: |
           npm install -g @aws-amplify/cli
           node -v
+          bash configure.sh
+          bash init.sh
           bash push.sh
-          configure.sh
-          init.sh
