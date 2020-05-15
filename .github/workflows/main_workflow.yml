@@ -31,10 +31,13 @@ jobs:
           version: ${{ matrix.node_version }}
 
       - name: Install Amplify CLI
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
           
-          aws configure set aws_access_key_id ${{secrets.AWS_ACCESS_KEY_ID}} --profile default
-          aws configure set aws_secret_access_key ${{secrets.AWS_SECRET_ACCESS_KEY}} --profile default
+          aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID --profile default
+          aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY --profile default
           aws configure set default.region us-east-1
           
           aws s3 ls
