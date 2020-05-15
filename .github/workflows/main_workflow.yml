@@ -36,4 +36,4 @@ jobs:
           npm install -g @aws-amplify/cli --unsafe-perm=true
           node -v
           
-          bash configure.sh
+          bash init.sh
