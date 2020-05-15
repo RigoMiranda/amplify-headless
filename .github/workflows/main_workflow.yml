@@ -39,8 +39,8 @@ jobs:
           aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID --profile default
           aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY --profile default
           aws configure set default.region us-east-1
-          
-          aws s3 ls
-          
+                    
           npm install -g @aws-amplify/cli --unsafe-perm=true
           node -v
+          
+          bash configure.sh
