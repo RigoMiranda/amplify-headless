@@ -2,16 +2,12 @@
 set -e
 IFS='|'
 
-AUTHCONFIG="{\
-\"googleClientId\":\"goog\"
-}"
-
 AWSCLOUDFORMATIONCONFIG="{\
 \"configLevel\":\"project\",\
 \"useProfile\":true,\
 \"profileName\":\"default\",\
-\"accessKeyId\":\"headlessaccesskeyid\",\
-\"secretAccessKey\":\"headlesssecrectaccesskey\",\
+\"accessKeyId\":\"$AWS_ACCESS_KEY_ID\",\
+\"secretAccessKey\":\"$AWS_SECRET_ACCESS_KEY\",\
 \"region\":\"us-east-1\"\
 }"
 AMPLIFY="{\
@@ -31,7 +27,6 @@ CATEGORIES="{\
 
 amplify init \
 --amplify $AMPLIFY \
---categories $CATEGORIES \
 --frontend $FRONTEND \
 --providers $PROVIDERS \
 --yes
