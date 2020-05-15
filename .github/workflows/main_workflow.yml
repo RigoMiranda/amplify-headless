@@ -1,0 +1,32 @@
+name: Master workflow
+on:
+  push:
+    branches: [ master ]
+jobs:
+  build:
+    strategy:
+      matrix:
+        node_version: [12.x]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+          
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{secrets.AWS_ACCESS_KEY_ID}}
+          aws-secret-access-key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+          aws-region: us-east-1
+
+      - name: Use Node.js ${{ matrix.node_version }}
+        uses: actions/setup-node@v1
+        with:
+          version: ${{ matrix.node_version }}
+
+      - name: Install Amplify CLI
+        run: |
+          npm install -g @aws-amplify/cli
+          node -v
+          bash init.sh
+          bash push.sh
