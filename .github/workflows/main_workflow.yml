@@ -34,6 +34,6 @@ jobs:
         run: |
           npm install -g @aws-amplify/cli
           node -v
-          aws s3 ls
+          configure.sh
           bash init.sh
           bash push.sh
