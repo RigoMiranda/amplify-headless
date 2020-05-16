@@ -12,6 +12,8 @@ jobs:
       
       - name: Checkout Repository
         uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
       
       - name: Install AWS CLI
         run: |
