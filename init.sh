@@ -21,12 +21,18 @@ FRONTEND="{\
 PROVIDERS="{\
 \"awscloudformation\":$AWSCLOUDFORMATIONCONFIG\
 }"
-CATEGORIES="{\
-\"auth\":$AUTHCONFIG\
+CODEGEN="{\
+\"generateCode\":true,\
+\"codeLanguage\":\"swift\",\
+\"fileNamePattern\":\"graphql/**/*.graphql\",\
+\"generatedFileName\":\"API.swift\",\
+\"generateDocs\":true,\
+\"maxDepth\":2\
 }"
 
 amplify init \
 --amplify $AMPLIFY \
 --frontend $FRONTEND \
 --providers $PROVIDERS \
+--codegen $CODEGEN \
 --yes
