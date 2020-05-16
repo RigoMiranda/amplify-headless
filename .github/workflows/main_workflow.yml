@@ -46,4 +46,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4.2.0
         with:
           commit_message: Apply automatic changes
-          file_pattern: amplify/* graphql/* *.js *.yml *.swift 
+          file_pattern: amplify/* graphql/* *.js *.yml
