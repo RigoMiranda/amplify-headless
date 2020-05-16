@@ -71,14 +71,14 @@
 		"apitemplate": {
 			"Type": "AWS::CloudFormation::Stack",
 			"Properties": {
-				"TemplateURL": "https://s3.amazonaws.com/amplify-template-dev-172545-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+				"TemplateURL": "https://s3.amazonaws.com/amplify-template-dev-224936-deployment/amplify-cfn-templates/api/cloudformation-template.json",
 				"Parameters": {
 					"CreateAPIKey": 1,
 					"AppSyncApiName": "template",
 					"DynamoDBBillingMode": "PAY_PER_REQUEST",
 					"DynamoDBEnableServerSideEncryption": "false",
-					"S3DeploymentBucket": "amplify-template-dev-172545-deployment",
-					"S3DeploymentRootKey": "amplify-appsync-files/bfa8ba54fb2bb00d3841c212c06673e17904669d",
+					"S3DeploymentBucket": "amplify-template-dev-224936-deployment",
+					"S3DeploymentRootKey": "amplify-appsync-files/6116b3911886337ec6aae8b6407c3f266fc34114",
 					"env": "dev"
 				}
 			}
@@ -86,7 +86,7 @@
 		"authtemplate7d4ec91b": {
 			"Type": "AWS::CloudFormation::Stack",
 			"Properties": {
-				"TemplateURL": "https://s3.amazonaws.com/amplify-template-dev-172545-deployment/amplify-cfn-templates/auth/template7d4ec91b-cloudformation-template.yml",
+				"TemplateURL": "https://s3.amazonaws.com/amplify-template-dev-224936-deployment/amplify-cfn-templates/auth/template7d4ec91b-cloudformation-template.yml",
 				"Parameters": {
 					"identityPoolName": "template7d4ec91b_identitypool_7d4ec91b",
 					"allowUnauthenticatedIdentities": true,
@@ -133,7 +133,7 @@
 		"storagetemplateStorage": {
 			"Type": "AWS::CloudFormation::Stack",
 			"Properties": {
-				"TemplateURL": "https://s3.amazonaws.com/amplify-template-dev-172545-deployment/amplify-cfn-templates/storage/s3-cloudformation-template.json",
+				"TemplateURL": "https://s3.amazonaws.com/amplify-template-dev-224936-deployment/amplify-cfn-templates/storage/s3-cloudformation-template.json",
 				"Parameters": {
 					"bucketName": "template-s3",
 					"authPolicyName": "s3_amplify_8722565b",
