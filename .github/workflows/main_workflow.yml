@@ -38,6 +38,7 @@ jobs:
           node -v
           
           bash init.sh
+          bash push.sh
           
       - name: Commit Amplify Files
         uses: stefanzweifel/git-auto-commit-action@v4.2.0
