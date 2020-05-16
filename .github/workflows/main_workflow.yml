@@ -9,41 +9,41 @@ jobs:
         node_version: [12.x]
     runs-on: ubuntu-latest
     steps:
-      
       - name: Checkout Repository
         uses: actions/checkout@v2
         with:
           ref: ${{ github.head_ref }}
-      
-      - name: Install AWS CLI
+
+      # We need to AWS CLI to configure the account and profile credentials.
+      # Note: The --profile {default} needs to be the same that the profileName in the init.sh
+      - name: Install AWS CLI & Configuring Profile Credentials
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
           curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
           unzip awscliv2.zip
           sudo ./aws/install
-  
+
+          aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID --profile default
+          aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY --profile default
+          aws configure set default.region us-east-1
+
       - name: Use Node.js ${{ matrix.node_version }}
         uses: actions/setup-node@v1
         with:
           version: ${{ matrix.node_version }}
 
-      - name: Install Amplify CLI
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        run: |
-          
-          aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID --profile default
-          aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY --profile default
-          aws configure set default.region us-east-1
-                    
+      - name: Install Amplify CLI & Deploying Project
+        run: |     
           npm install -g @aws-amplify/cli --unsafe-perm=true
           node -v
-          
+
           bash init.sh
           bash push.sh
-          
+
       - name: Commit Amplify Files
         uses: stefanzweifel/git-auto-commit-action@v4.2.0
         with:
           commit_message: Apply automatic changes
-          file_pattern: amplify/* graphql/* amplifyconfiguration.json awsconfiguration.json .graphqlconfig.yml API.swift
+          file_pattern: amplify/* graphql/* amplifyconfiguration.json awsconfiguration.json API.swift
