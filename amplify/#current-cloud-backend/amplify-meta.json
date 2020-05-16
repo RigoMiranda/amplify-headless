@@ -10,6 +10,11 @@
 			"StackName": "amplify-template-dev-224936",
 			"StackId": "arn:aws:cloudformation:us-east-1:817379289172:stack/amplify-template-dev-224936/84e97580-97c7-11ea-b30e-1208f0f76cbf",
 			"AmplifyAppId": "d3h6nilqewziri"
+		},
+		"categories": {
+			"auth": {
+				"template7d4ec91b": {}
+			}
 		}
 	},
 	"api": {
@@ -31,12 +36,12 @@
 				"GraphQLAPIEndpointOutput": "https://7zp4s25c3femfmy7hsx4suweim.appsync-api.us-east-1.amazonaws.com/graphql",
 				"GraphQLAPIKeyOutput": "da2-vvvz6nnrebc4tdyg4vhmqjn4li"
 			},
+			"lastPushTimeStamp": "2020-05-16T23:23:58.313Z",
 			"providerMetadata": {
 				"s3TemplateURL": "https://s3.amazonaws.com/amplify-template-dev-224936-deployment/amplify-cfn-templates/api/cloudformation-template.json",
 				"logicalId": "apitemplate"
 			},
-			"lastPushTimeStamp": "2020-05-16T22:53:11.376Z",
-			"lastPushDirHash": "uXVWldjAQe80BQmKV8RTKbaAyco="
+			"lastPushDirHash": "batFNyGJY5bKtaaExRE+bsRye5c="
 		}
 	},
 	"auth": {
@@ -44,11 +49,6 @@
 			"service": "Cognito",
 			"providerPlugin": "awscloudformation",
 			"dependsOn": [],
-			"providerMetadata": {
-				"s3TemplateURL": "https://s3.amazonaws.com/amplify-template-dev-224936-deployment/amplify-cfn-templates/auth/template7d4ec91b-cloudformation-template.yml",
-				"logicalId": "authtemplate7d4ec91b"
-			},
-			"lastPushTimeStamp": "2020-05-16T22:53:11.376Z",
 			"output": {
 				"AppClientSecret": "1jnbvd6lf09ju2ee4lcvg2gnrkqgcf79emq3m2bkafiubt42dg6p",
 				"UserPoolId": "us-east-1_P64VNOCRL",
@@ -58,6 +58,11 @@
 				"IdentityPoolName": "template7d4ec91b_identitypool_7d4ec91b__dev",
 				"UserPoolName": "template7d4ec91b_userpool_7d4ec91b"
 			},
+			"lastPushTimeStamp": "2020-05-16T23:23:58.313Z",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/amplify-template-dev-224936-deployment/amplify-cfn-templates/auth/template7d4ec91b-cloudformation-template.yml",
+				"logicalId": "authtemplate7d4ec91b"
+			},
 			"lastPushDirHash": "k/2qlzC7p0juBeefdB9zCaffSuA="
 		}
 	},
@@ -65,14 +70,14 @@
 		"templateStorage": {
 			"service": "S3",
 			"providerPlugin": "awscloudformation",
-			"providerMetadata": {
-				"s3TemplateURL": "https://s3.amazonaws.com/amplify-template-dev-224936-deployment/amplify-cfn-templates/storage/s3-cloudformation-template.json",
-				"logicalId": "storagetemplateStorage"
-			},
-			"lastPushTimeStamp": "2020-05-16T22:53:11.376Z",
 			"output": {
 				"BucketName": "template-s3224936-dev",
 				"Region": "us-east-1"
+			},
+			"lastPushTimeStamp": "2020-05-16T23:23:58.313Z",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/amplify-template-dev-224936-deployment/amplify-cfn-templates/storage/s3-cloudformation-template.json",
+				"logicalId": "storagetemplateStorage"
 			},
 			"lastPushDirHash": "3ZDgaZL3ZEPxSVRxiHNY2i2rn0I="
 		}
