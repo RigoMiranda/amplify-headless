@@ -39,9 +39,9 @@ jobs:
           npm install -g @aws-amplify/cli --unsafe-perm=true
           node -v
 
-          bash configure.sh
           bash init.sh
           bash push.sh
+          amplify codegen
 
       - name: Commit Amplify Files
         uses: stefanzweifel/git-auto-commit-action@v4.2.0
