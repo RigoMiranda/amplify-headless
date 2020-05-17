@@ -2,13 +2,13 @@
     "providers": {
         "awscloudformation": {
             "AuthRoleName": "amplify-template-dev-224936-authRole",
-            "UnauthRoleArn": "arn:aws:iam::817379289172:role/amplify-template-dev-224936-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::817379289172:role/amplify-template-dev-224936-authRole",
+            "UnauthRoleArn": "arn:aws:iam::***********:role/amplify-template-dev-224936-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::***********:role/amplify-template-dev-224936-authRole",
             "Region": "us-east-1",
             "DeploymentBucketName": "amplify-template-dev-224936-deployment",
             "UnauthRoleName": "amplify-template-dev-224936-unauthRole",
             "StackName": "amplify-template-dev-224936",
-            "StackId": "arn:aws:cloudformation:us-east-1:817379289172:stack/amplify-template-dev-224936/84e97580-97c7-11ea-b30e-1208f0f76cbf",
+            "StackId": "arn:aws:cloudformation:us-east-1:***********:stack/amplify-template-dev-224936/84e97580-97c7-11ea-b30e-1208f0f76cbf",
             "AmplifyAppId": "d3h6nilqewziri"
         },
         "categories": {
