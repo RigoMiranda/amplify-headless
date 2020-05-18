@@ -1,5 +1,5 @@
 {
-    "bucketName": "template-s3",
+    "bucketName": "amplify-headless-s3",
     "authPolicyName": "s3_amplify_8722565b",
     "unauthPolicyName": "s3_amplify_8722565b",
     "authRoleName": {

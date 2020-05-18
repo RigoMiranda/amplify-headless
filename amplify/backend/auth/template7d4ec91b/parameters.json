@@ -1,8 +1,8 @@
 {
-    "identityPoolName": "template7d4ec91b_identitypool_7d4ec91b",
+    "identityPoolName": "amplifyheadless7d4ec91b_identitypool_7d4ec91b",
     "allowUnauthenticatedIdentities": true,
-    "resourceNameTruncated": "templa7d4ec91b",
-    "userPoolName": "template7d4ec91b_userpool_7d4ec91b",
+    "resourceNameTruncated": "ampli7d4ec91b",
+    "userPoolName": "amplifyheadless7d4ec91b_userpool_7d4ec91b",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -28,9 +28,9 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "userpoolClientLambdaRole": "templa7d4ec91b_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "ampli7d4ec91b_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "resourceName": "template7d4ec91b",
+    "resourceName": "amplifyheadless7d4ec91b",
     "authSelections": "identityPoolAndUserPool",
     "authRoleArn": {
         "Fn::GetAtt": [

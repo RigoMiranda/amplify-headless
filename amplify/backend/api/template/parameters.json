@@ -1,5 +1,5 @@
 {
-    "AppSyncApiName": "template",
+    "AppSyncApiName": "amplify-headless",
     "DynamoDBBillingMode": "PAY_PER_REQUEST",
     "DynamoDBEnableServerSideEncryption": "false"
 }
