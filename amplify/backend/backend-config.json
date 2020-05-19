@@ -1,6 +1,6 @@
 {
 	"api": {
-		"template": {
+		"amplifyHeadless": {
 			"service": "AppSync",
 			"providerPlugin": "awscloudformation",
 			"output": {
@@ -18,14 +18,14 @@
 		}
 	},
 	"auth": {
-		"template7d4ec91b": {
+		"amplifyHeadless7d4ec91b": {
 			"service": "Cognito",
 			"providerPlugin": "awscloudformation",
 			"dependsOn": []
 		}
 	},
 	"storage": {
-		"templateStorage": {
+		"amplifyHeadlessStorage": {
 			"service": "S3",
 			"providerPlugin": "awscloudformation"
 		}
